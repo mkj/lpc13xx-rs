@@ -1,1 +1,7 @@
 svd from https://github.com/posborne/cmsis-svd
+
+LPC13xx_svd_v1.svd for NXP LPC13xx devices
+
+Currently very rudimentary, just using svd2rust with a few manual fixups
+
+Matt Johnston matt@ucc.asn.au 2020
