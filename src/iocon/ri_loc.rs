@@ -15,13 +15,13 @@ impl crate::ResetValue for super::RI_LOC {
 #[repr(u8)]
 pub enum RILOC_A {
     #[doc = "0: Selects RI function in pin location PIO2_3/RI/MOSI1."]
-    SELECTS_RI_FUNCTION_ = 0,
+    SELECTS_RI_FUNCTION_0 = 0,
     #[doc = "1: Selects RI function in pin location PIO3_3/RI."]
-    SELECTS_RI_FUNCTION_ = 1,
+    SELECTS_RI_FUNCTION_1 = 1,
     #[doc = "2: Reserved."]
-    RESERVED_ = 2,
+    RESERVED_2 = 2,
     #[doc = "3: Reserved."]
-    RESERVED_ = 3,
+    RESERVED_3 = 3,
 }
 impl From<RILOC_A> for u8 {
     #[inline(always)]
@@ -36,13 +36,14 @@ impl RILOC_R {
     #[inline(always)]
     pub fn variant(&self) -> RILOC_A {
         match self.bits {
-            0 => RILOC_A::SELECTS_RI_FUNCTION_,
-            1 => RILOC_A::SELECTS_RI_FUNCTION_,
-            2 => RILOC_A::RESERVED_,
-            3 => RILOC_A::RESERVED_,
+            0 => RILOC_A::SELECTS_RI_FUNCTION_0,
+            1 => RILOC_A::SELECTS_RI_FUNCTION_1,
+            2 => RILOC_A::RESERVED_2,
+            3 => RILOC_A::RESERVED_3,
             _ => unreachable!(),
         }
     }
+    /*
     #[doc = "Checks if the value of the field is `SELECTS_RI_FUNCTION_`"]
     #[inline(always)]
     pub fn is_selects_ri_function_(&self) -> bool {
@@ -63,6 +64,7 @@ impl RILOC_R {
     pub fn is_reserved_(&self) -> bool {
         *self == RILOC_A::RESERVED_
     }
+    */
 }
 #[doc = "Write proxy for field `RILOC`"]
 pub struct RILOC_W<'a> {
@@ -76,6 +78,7 @@ impl<'a> RILOC_W<'a> {
             self.bits(variant.into())
         }
     }
+    /*
     #[doc = "Selects RI function in pin location PIO2_3/RI/MOSI1."]
     #[inline(always)]
     pub fn selects_ri_function_(self) -> &'a mut W {
@@ -96,6 +99,7 @@ impl<'a> RILOC_W<'a> {
     pub fn reserved_(self) -> &'a mut W {
         self.variant(RILOC_A::RESERVED_)
     }
+    */
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {

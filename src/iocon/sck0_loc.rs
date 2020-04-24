@@ -15,11 +15,11 @@ impl crate::ResetValue for super::SCK0_LOC {
 #[repr(u8)]
 pub enum SCKLOC_A {
     #[doc = "0: Selects SCK0 function for pin SWCLK/PIO0_10/SCK0/CT16B0_MAT2 (see Table 121)."]
-    SELECTS_SCK0_FUNCTIO = 0,
+    SCKLOC0 = 0,
     #[doc = "1: Selects SCK0 function for pin PIO2_11/SCK0 (see Table 123"]
-    SELECTS_SCK0_FUNCTIO = 1,
+    SCKLOC1 = 1,
     #[doc = "2: Selects SCK0 function for pin PIO0_6/USB_CONNECT/SCK0 (see Table 114)."]
-    SELECTS_SCK0_FUNCTIO = 2,
+    SCKLOC2 = 2,
     #[doc = "3: Reserved."]
     RESERVED_ = 3,
 }
@@ -36,31 +36,31 @@ impl SCKLOC_R {
     #[inline(always)]
     pub fn variant(&self) -> SCKLOC_A {
         match self.bits {
-            0 => SCKLOC_A::SELECTS_SCK0_FUNCTIO,
-            1 => SCKLOC_A::SELECTS_SCK0_FUNCTIO,
-            2 => SCKLOC_A::SELECTS_SCK0_FUNCTIO,
+            0 => SCKLOC_A::SCKLOC0,
+            1 => SCKLOC_A::SCKLOC1,
+            2 => SCKLOC_A::SCKLOC2,
             3 => SCKLOC_A::RESERVED_,
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `SELECTS_SCK0_FUNCTIO`"]
+    #[doc = "Checks if the value of the field is `SCKLOC0`"]
     #[inline(always)]
-    pub fn is_selects_sck0_functio(&self) -> bool {
-        *self == SCKLOC_A::SELECTS_SCK0_FUNCTIO
+    pub fn is_selects_sckloc0(&self) -> bool {
+        *self == SCKLOC_A::SCKLOC0
     }
-    #[doc = "Checks if the value of the field is `SELECTS_SCK0_FUNCTIO`"]
+    #[doc = "Checks if the value of the field is `SCKLOC1`"]
     #[inline(always)]
-    pub fn is_selects_sck0_functio(&self) -> bool {
-        *self == SCKLOC_A::SELECTS_SCK0_FUNCTIO
+    pub fn is_selects_sckloc1(&self) -> bool {
+        *self == SCKLOC_A::SCKLOC1
     }
-    #[doc = "Checks if the value of the field is `SELECTS_SCK0_FUNCTIO`"]
+    #[doc = "Checks if the value of the field is `SCKLOC2`"]
     #[inline(always)]
-    pub fn is_selects_sck0_functio(&self) -> bool {
-        *self == SCKLOC_A::SELECTS_SCK0_FUNCTIO
+    pub fn is_selects_sckloc2(&self) -> bool {
+        *self == SCKLOC_A::SCKLOC2
     }
     #[doc = "Checks if the value of the field is `RESERVED_`"]
     #[inline(always)]
-    pub fn is_reserved_(&self) -> bool {
+    pub fn is_reserved(&self) -> bool {
         *self == SCKLOC_A::RESERVED_
     }
 }
@@ -78,18 +78,18 @@ impl<'a> SCKLOC_W<'a> {
     }
     #[doc = "Selects SCK0 function for pin SWCLK/PIO0_10/SCK0/CT16B0_MAT2 (see Table 121)."]
     #[inline(always)]
-    pub fn selects_sck0_functio(self) -> &'a mut W {
-        self.variant(SCKLOC_A::SELECTS_SCK0_FUNCTIO)
+    pub fn selects_sckloc0(self) -> &'a mut W {
+        self.variant(SCKLOC_A::SCKLOC0)
     }
     #[doc = "Selects SCK0 function for pin PIO2_11/SCK0 (see Table 123"]
     #[inline(always)]
-    pub fn selects_sck0_functio(self) -> &'a mut W {
-        self.variant(SCKLOC_A::SELECTS_SCK0_FUNCTIO)
+    pub fn selects_sckloc1(self) -> &'a mut W {
+        self.variant(SCKLOC_A::SCKLOC1)
     }
     #[doc = "Selects SCK0 function for pin PIO0_6/USB_CONNECT/SCK0 (see Table 114)."]
     #[inline(always)]
-    pub fn selects_sck0_functio(self) -> &'a mut W {
-        self.variant(SCKLOC_A::SELECTS_SCK0_FUNCTIO)
+    pub fn selects_sck0loc2(self) -> &'a mut W {
+        self.variant(SCKLOC_A::SCKLOC2)
     }
     #[doc = "Reserved."]
     #[inline(always)]

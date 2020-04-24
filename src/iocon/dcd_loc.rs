@@ -19,9 +19,9 @@ pub enum DCDLOC_A {
     #[doc = "1: Selects  DCD function in pin location PIO3_2/DCD."]
     SELECTS_DCD_FUNCTIO = 1,
     #[doc = "2: Reserved."]
-    RESERVED_ = 2,
+    RESERVED_2 = 2,
     #[doc = "3: Reserved."]
-    RESERVED_ = 3,
+    RESERVED_3 = 3,
 }
 impl From<DCDLOC_A> for u8 {
     #[inline(always)]
@@ -38,11 +38,12 @@ impl DCDLOC_R {
         match self.bits {
             0 => DCDLOC_A::SELECTS_DCD_FUNCTION,
             1 => DCDLOC_A::SELECTS_DCD_FUNCTIO,
-            2 => DCDLOC_A::RESERVED_,
-            3 => DCDLOC_A::RESERVED_,
+            2 => DCDLOC_A::RESERVED_2,
+            3 => DCDLOC_A::RESERVED_3,
             _ => unreachable!(),
         }
     }
+    /*
     #[doc = "Checks if the value of the field is `SELECTS_DCD_FUNCTION`"]
     #[inline(always)]
     pub fn is_selects_dcd_function(&self) -> bool {
@@ -63,6 +64,7 @@ impl DCDLOC_R {
     pub fn is_reserved_(&self) -> bool {
         *self == DCDLOC_A::RESERVED_
     }
+    */
 }
 #[doc = "Write proxy for field `DCDLOC`"]
 pub struct DCDLOC_W<'a> {
@@ -86,6 +88,7 @@ impl<'a> DCDLOC_W<'a> {
     pub fn selects_dcd_functio(self) -> &'a mut W {
         self.variant(DCDLOC_A::SELECTS_DCD_FUNCTIO)
     }
+    /*
     #[doc = "Reserved."]
     #[inline(always)]
     pub fn reserved_(self) -> &'a mut W {
@@ -96,6 +99,7 @@ impl<'a> DCDLOC_W<'a> {
     pub fn reserved_(self) -> &'a mut W {
         self.variant(DCDLOC_A::RESERVED_)
     }
+    */
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {

@@ -273,11 +273,11 @@ pub enum START_A {
     #[doc = "4: Start conversion when the edge selected by bit 27 occurs on CT32B0_MAT0. Timer match function does not need to be selected on the device pin."]
     EDGECT32B0_MAT0 = 4,
     #[doc = "5: Start conversion when the edge selected by bit 27 occurs on CT32B0_MAT1. Timer match function does not need to be selected on the device pin."]
-    EDGECT32B1_MAT0 = 5,
+    EDGECT32B0_MAT1 = 5,
     #[doc = "6: Start conversion when the edge selected by bit 27 occurs on CT16B0_MAT0. Timer match function does not need to be selected on the device pin."]
     EDGECT16B0_MAT0 = 6,
     #[doc = "7: Start conversion when the edge selected by bit 27 occurs on CT16B0_MAT1. Timer match function does not need to be selected on the device pin."]
-    EDGECT16B0_MAT0 = 7,
+    EDGECT16B0_MAT1 = 7,
 }
 impl From<START_A> for u8 {
     #[inline(always)]
@@ -297,9 +297,9 @@ impl START_R {
             2 => START_A::EDGEPIO0_2,
             3 => START_A::EDGEPIO1_5,
             4 => START_A::EDGECT32B0_MAT0,
-            5 => START_A::EDGECT32B1_MAT0,
+            5 => START_A::EDGECT32B0_MAT1,
             6 => START_A::EDGECT16B0_MAT0,
-            7 => START_A::EDGECT16B0_MAT0,
+            7 => START_A::EDGECT16B0_MAT1,
             _ => unreachable!(),
         }
     }
@@ -328,20 +328,20 @@ impl START_R {
     pub fn is_edgect32b0_mat0(&self) -> bool {
         *self == START_A::EDGECT32B0_MAT0
     }
-    #[doc = "Checks if the value of the field is `EDGECT32B1_MAT0`"]
+    #[doc = "Checks if the value of the field is `EDGECT32B0_MAT1`"]
     #[inline(always)]
-    pub fn is_edgect32b1_mat0(&self) -> bool {
-        *self == START_A::EDGECT32B1_MAT0
+    pub fn is_edgect32b0_mat1(&self) -> bool {
+        *self == START_A::EDGECT32B0_MAT1
     }
     #[doc = "Checks if the value of the field is `EDGECT16B0_MAT0`"]
     #[inline(always)]
     pub fn is_edgect16b0_mat0(&self) -> bool {
         *self == START_A::EDGECT16B0_MAT0
     }
-    #[doc = "Checks if the value of the field is `EDGECT16B0_MAT0`"]
+    #[doc = "Checks if the value of the field is `EDGECT16B0_MAT1`"]
     #[inline(always)]
-    pub fn is_edgect16b0_mat0(&self) -> bool {
-        *self == START_A::EDGECT16B0_MAT0
+    pub fn is_edgect16b0_mat1(&self) -> bool {
+        *self == START_A::EDGECT16B0_MAT1
     }
 }
 #[doc = "Write proxy for field `START`"]
@@ -383,8 +383,8 @@ impl<'a> START_W<'a> {
     }
     #[doc = "Start conversion when the edge selected by bit 27 occurs on CT32B0_MAT1. Timer match function does not need to be selected on the device pin."]
     #[inline(always)]
-    pub fn edgect32b1_mat0(self) -> &'a mut W {
-        self.variant(START_A::EDGECT32B1_MAT0)
+    pub fn edgect32b0_mat1(self) -> &'a mut W {
+        self.variant(START_A::EDGECT32B0_MAT1)
     }
     #[doc = "Start conversion when the edge selected by bit 27 occurs on CT16B0_MAT0. Timer match function does not need to be selected on the device pin."]
     #[inline(always)]
@@ -393,8 +393,8 @@ impl<'a> START_W<'a> {
     }
     #[doc = "Start conversion when the edge selected by bit 27 occurs on CT16B0_MAT1. Timer match function does not need to be selected on the device pin."]
     #[inline(always)]
-    pub fn edgect16b0_mat0(self) -> &'a mut W {
-        self.variant(START_A::EDGECT16B0_MAT0)
+    pub fn edgect16b0_mat1(self) -> &'a mut W {
+        self.variant(START_A::EDGECT16B0_MAT1)
     }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]

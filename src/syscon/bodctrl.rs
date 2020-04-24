@@ -15,13 +15,13 @@ impl crate::ResetValue for super::BODCTRL {
 #[repr(u8)]
 pub enum BODRSTLEV_A {
     #[doc = "0: The reset assertion threshold voltage is 1.49 V/1.46 V; the reset de-assertion threshold voltage is 1.64 V/1.63 V."]
-    THE_RESET_ASSERTION_ = 0,
+    LEVEL_0 = 0,
     #[doc = "1: The reset assertion threshold voltage is -/2.06 V; the reset de-assertion threshold voltage is -/2.15 V."]
-    THE_RESET_ASSERTION_ = 1,
+    LEVEL_1 = 1,
     #[doc = "2: The reset assertion threshold voltage is -/2.35 V; the reset de-assertion threshold voltage is -/2.43 V."]
-    THE_RESET_ASSERTION_ = 2,
+    LEVEL_2 = 2,
     #[doc = "3: The reset assertion threshold voltage is -/2.63 V; the reset de-assertion threshold voltage is -/2.71 V."]
-    THE_RESET_ASSERTION_ = 3,
+    LEVEL_3 = 3,
 }
 impl From<BODRSTLEV_A> for u8 {
     #[inline(always)]
@@ -36,17 +36,18 @@ impl BODRSTLEV_R {
     #[inline(always)]
     pub fn variant(&self) -> BODRSTLEV_A {
         match self.bits {
-            0 => BODRSTLEV_A::THE_RESET_ASSERTION_,
-            1 => BODRSTLEV_A::THE_RESET_ASSERTION_,
-            2 => BODRSTLEV_A::THE_RESET_ASSERTION_,
-            3 => BODRSTLEV_A::THE_RESET_ASSERTION_,
+            0 => BODRSTLEV_A::LEVEL_0,
+            1 => BODRSTLEV_A::LEVEL_1,
+            2 => BODRSTLEV_A::LEVEL_2,
+            3 => BODRSTLEV_A::LEVEL_3,
             _ => unreachable!(),
         }
     }
+    /*
     #[doc = "Checks if the value of the field is `THE_RESET_ASSERTION_`"]
     #[inline(always)]
     pub fn is_the_reset_assertion_(&self) -> bool {
-        *self == BODRSTLEV_A::THE_RESET_ASSERTION_
+        *self == BODRSTLEV_A::
     }
     #[doc = "Checks if the value of the field is `THE_RESET_ASSERTION_`"]
     #[inline(always)]
@@ -63,6 +64,7 @@ impl BODRSTLEV_R {
     pub fn is_the_reset_assertion_(&self) -> bool {
         *self == BODRSTLEV_A::THE_RESET_ASSERTION_
     }
+    */
 }
 #[doc = "Write proxy for field `BODRSTLEV`"]
 pub struct BODRSTLEV_W<'a> {
@@ -76,6 +78,7 @@ impl<'a> BODRSTLEV_W<'a> {
             self.bits(variant.into())
         }
     }
+    /*
     #[doc = "The reset assertion threshold voltage is 1.49 V/1.46 V; the reset de-assertion threshold voltage is 1.64 V/1.63 V."]
     #[inline(always)]
     pub fn the_reset_assertion_(self) -> &'a mut W {
@@ -96,6 +99,7 @@ impl<'a> BODRSTLEV_W<'a> {
     pub fn the_reset_assertion_(self) -> &'a mut W {
         self.variant(BODRSTLEV_A::THE_RESET_ASSERTION_)
     }
+    */
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
@@ -108,13 +112,13 @@ impl<'a> BODRSTLEV_W<'a> {
 #[repr(u8)]
 pub enum BODINTVAL_A {
     #[doc = "0: The interrupt assertion threshold voltage is 1.69 V/1.65 V; the interrupt de-assertion threshold voltage is 1.84 V/1.8 V."]
-    THE_INTERRUPT_ASSERT = 0,
+    LEVEL_0 = 0,
     #[doc = "1: The interrupt assertion threshold voltage is 2.29 V/2.22 V; the interrupt de-assertion threshold voltage is 2.44 V/2.35 V."]
-    THE_INTERRUPT_ASSERT = 1,
+    LEVEL_1 = 1,
     #[doc = "2: The interrupt assertion threshold voltage is 2.59 V/ 2.52 V; the interrupt de-assertion threshold voltage is 2.74 V/2.66 V."]
-    THE_INTERRUPT_ASSERT = 2,
+    LEVEL_2 = 2,
     #[doc = "3: The interrupt assertion threshold voltage is 2.87 V/2.80 V; the interrupt de-assertion threshold voltage is 2.98 V/2.90 V."]
-    THE_INTERRUPT_ASSERT = 3,
+    LEVEL_3 = 3,
 }
 impl From<BODINTVAL_A> for u8 {
     #[inline(always)]
@@ -129,13 +133,14 @@ impl BODINTVAL_R {
     #[inline(always)]
     pub fn variant(&self) -> BODINTVAL_A {
         match self.bits {
-            0 => BODINTVAL_A::THE_INTERRUPT_ASSERT,
-            1 => BODINTVAL_A::THE_INTERRUPT_ASSERT,
-            2 => BODINTVAL_A::THE_INTERRUPT_ASSERT,
-            3 => BODINTVAL_A::THE_INTERRUPT_ASSERT,
+            0 => BODINTVAL_A::LEVEL_0,
+            1 => BODINTVAL_A::LEVEL_1,
+            2 => BODINTVAL_A::LEVEL_2,
+            3 => BODINTVAL_A::LEVEL_3,
             _ => unreachable!(),
         }
     }
+    /*
     #[doc = "Checks if the value of the field is `THE_INTERRUPT_ASSERT`"]
     #[inline(always)]
     pub fn is_the_interrupt_assert(&self) -> bool {
@@ -156,6 +161,7 @@ impl BODINTVAL_R {
     pub fn is_the_interrupt_assert(&self) -> bool {
         *self == BODINTVAL_A::THE_INTERRUPT_ASSERT
     }
+    */
 }
 #[doc = "Write proxy for field `BODINTVAL`"]
 pub struct BODINTVAL_W<'a> {
@@ -169,6 +175,7 @@ impl<'a> BODINTVAL_W<'a> {
             self.bits(variant.into())
         }
     }
+    /*
     #[doc = "The interrupt assertion threshold voltage is 1.69 V/1.65 V; the interrupt de-assertion threshold voltage is 1.84 V/1.8 V."]
     #[inline(always)]
     pub fn the_interrupt_assert(self) -> &'a mut W {
@@ -189,6 +196,7 @@ impl<'a> BODINTVAL_W<'a> {
     pub fn the_interrupt_assert(self) -> &'a mut W {
         self.variant(BODINTVAL_A::THE_INTERRUPT_ASSERT)
     }
+    */
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {

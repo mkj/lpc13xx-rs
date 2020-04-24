@@ -1,3 +1,9 @@
+[package]
+name = "lpc13xx-rs"
+version = "0.1.0"
+authors = ["Matt Johnston <matt@ucc.asn.au>"]
+edition = "2018"
+
 [dependencies]
 bare-metal = "0.2.0"
 cortex-m = "0.5.8"
